@@ -407,7 +407,13 @@ def get_environment() -> ToolUsageEnvironment:
 
 
 # ID of a dataset that contains the questions and references
-DATASET_ID = "https://smith.langchain.com/public/1d89f4b3-5f73-48cf-a127-2fdeb22f6d84/d"
+
+# Original id
+#DATASET_ID = "https://smith.langchain.com/public/1d89f4b3-5f73-48cf-a127-2fdeb22f6d84/d"
+
+# The Finnish dataset share link
+DATASET_ID = "https://smith.langchain.com/public/f8b1abb2-a0a9-474a-b109-6c05addb0ace/d"
+
 
 RELATIONAL_DATA_TASK = ToolUsageTask(
     name="Tool Usage - Relational Data",
@@ -415,8 +421,8 @@ RELATIONAL_DATA_TASK = ToolUsageTask(
     create_environment=get_environment,
     instructions=(
         """\
-Please answer the user's question by using the tools provided. Do not guess the \
-answer. Keep in mind that entities like users,foods and locations have both a \
+User poses questions to you in Finnish language. Please answer the user's question in Finnish by using the tools provided. Do not guess the \
+answer. Keep in mind that entities like users, foods and locations have both a \
 name and an ID, which are not the same."""
     ),
     description=(
